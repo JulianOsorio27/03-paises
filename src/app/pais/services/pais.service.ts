@@ -31,5 +31,11 @@ export class PaisService {
     return this.http.get<Countrys>( url )
   }
   
+  buscarRegion = ( region:string ):Observable<Countrys[]> => {
+    const url = `https://restcountries.com/v2/regionalbloc/${region}`;
+  
+
+    return this.http.get<Countrys[]>(url);
+  }
 
 }
